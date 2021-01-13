@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".declaration_form"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="2dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/declare_acoomodation"
+                android:layout_marginTop="20dp"
+                android:textSize="25dp"
+                android:layout_gravity="center"
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="30dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registration_number"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:id="@+id/reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/light_blue"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_student"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:id="@+id/studentname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/light_blue"
+                android:editable="false"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/level_class"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+
+                />
+            <EditText
+                android:id="@+id/studentid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/academic_year"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:id="@+id/acayear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/light_blue"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/landlord_names"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:id="@+id/landLord_names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/light_blue"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/landlord_s_id"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+
+                />
+            <EditText
+                android:id="@+id/landid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:inputType="number"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/landlord_phone"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:id="@+id/phoneLandlord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="15dp"
+                android:inputType="number"
+                android:layout_marginTop="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/house_no"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+
+                />
+            <EditText
+                android:id="@+id/houseNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="15dp"
+                android:inputType="number"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/district"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginBottom="5dp"
+                />
+            <EditText
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cell"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+
+                />
+            <EditText
+                android:id="@+id/cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sector"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginBottom="5dp"
+                />
+            <EditText
+                android:id="@+id/sector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/village"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+
+                />
+            <EditText
+                android:id="@+id/village"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                />
+            <Button
+                android:id="@+id/declare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/declare"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
