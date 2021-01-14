@@ -13,43 +13,46 @@ import android.view.ViewGroup;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class declaration_tab extends Fragment {
 
-    private FloatingActionButton fabdeclare;
-    private RecyclerView declareRecycle;
+public class ReservationView extends Fragment {
+
+    private FloatingActionButton fabserve;
+    private RecyclerView reserveRecycle;
     private RecyclerView.LayoutManager layoutManager;
-
-    public declaration_tab() {
-        // Required empty public constructor
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view  =  inflater.inflate(R.layout.declaration_tab, container, false);
+        final View view =  inflater.inflate(R.layout.reservation_tab, container, false);
 
-        fabdeclare = view.findViewById(R.id.fab_decla);
+
+        fabserve = view.findViewById(R.id.fab_reserv);
 
         // for recycle view
-        declareRecycle = view.findViewById(R.id.declarecycle);
+        reserveRecycle = view.findViewById(R.id.reservation_recycle);
         layoutManager = new LinearLayoutManager(view.getContext());
-        declareRecycle.setLayoutManager(layoutManager);
+        reserveRecycle.setLayoutManager(layoutManager);
         fetch_Data();
 
-        fabdeclare.setOnClickListener(new View.OnClickListener() {
+
+        fabserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent adddeclaration  = new Intent (view.getContext(),declaration_form.class);
-                startActivity(adddeclaration);
+                Intent addReservation  = new Intent (view.getContext(), ReserveAccomodation.class);
+                startActivity(addReservation);
             }
         });
 
-
+        fetch_Data();
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        fetch_Data();
+    }
     private void fetch_Data() {
     }
 }

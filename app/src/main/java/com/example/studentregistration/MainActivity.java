@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Reservation_view(), "Reservation");
-        adapter.addFragment(new declaration_tab(), "Declaration"); // tabs
+        adapter.addFragment(new ReservationView(), "Reservation");
+        adapter.addFragment(new DeclarationTan(), "Declaration"); // tabs
 
         viewPager.setAdapter(adapter);
     }

@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),create_account.class));
+                startActivity(new Intent(getApplicationContext(), CreateAccount.class));
             }
         });
         kanda.setOnClickListener(new View.OnClickListener() {

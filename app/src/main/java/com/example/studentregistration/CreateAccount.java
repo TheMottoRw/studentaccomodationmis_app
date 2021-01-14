@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
-public class create_account extends AppCompatActivity {
+public class CreateAccount extends AppCompatActivity {
 
     private EditText name,id,national,phone_student,password;
     private RadioButton male, female;

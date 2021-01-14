@@ -10,50 +10,46 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+public class DeclarationTan extends Fragment {
 
-public class Reservation_view extends Fragment {
-
-    private FloatingActionButton fabserve;
-    private RecyclerView reserveRecycle;
+    private FloatingActionButton fabdeclare;
+    private RecyclerView declareRecycle;
     private RecyclerView.LayoutManager layoutManager;
+
+    public DeclarationTan() {
+        // Required empty public constructor
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view =  inflater.inflate(R.layout.reservation_tab, container, false);
+        final View view  =  inflater.inflate(R.layout.declaration_tab, container, false);
 
-
-        fabserve = view.findViewById(R.id.fab_reserv);
+        fabdeclare = view.findViewById(R.id.fab_decla);
 
         // for recycle view
-        reserveRecycle = view.findViewById(R.id.reservation_recycle);
+        declareRecycle = view.findViewById(R.id.declarecycle);
         layoutManager = new LinearLayoutManager(view.getContext());
-        reserveRecycle.setLayoutManager(layoutManager);
+        declareRecycle.setLayoutManager(layoutManager);
         fetch_Data();
 
-
-        fabserve.setOnClickListener(new View.OnClickListener() {
+        fabdeclare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent addReservation  = new Intent (view.getContext(),Reserve_Accomodation.class);
-                startActivity(addReservation);
+                Intent adddeclaration  = new Intent (view.getContext(), DeclarationForm.class);
+                startActivity(adddeclaration);
             }
         });
 
-        fetch_Data();
+
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        fetch_Data();
-    }
     private void fetch_Data() {
     }
 }

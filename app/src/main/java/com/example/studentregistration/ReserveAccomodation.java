@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class Reserve_Accomodation extends AppCompatActivity {
+public class ReserveAccomodation extends AppCompatActivity {
 
     private EditText registerNumber,studentname,level,academic;
     private Spinner room;

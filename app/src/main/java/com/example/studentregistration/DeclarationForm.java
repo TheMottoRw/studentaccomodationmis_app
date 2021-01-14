@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class declaration_form extends AppCompatActivity {
+public class DeclarationForm extends AppCompatActivity {
     private EditText reg,studentname,studentid,acayear,landLord_names,landid,phoneLandlord,houseNo,district,cell,village,sector;
     private Button declare;
 

@@ -22,6 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabMode="fixed"
+            android:background="?attr/colorPrimary"
+            app:tabTextColor="@color/white"
 
             app:tabGravity="fill"/>
     </com.google.android.material.appbar.AppBarLayout>
