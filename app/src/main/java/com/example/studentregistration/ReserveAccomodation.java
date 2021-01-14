@@ -16,7 +16,7 @@ public class ReserveAccomodation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.reserve__accomodation_form);
+        setContentView(R.layout.reserve_accomodation_form);
 
         registerNumber = findViewById(R.id.registernumber);
         studentname = findViewById(R.id.stuname);

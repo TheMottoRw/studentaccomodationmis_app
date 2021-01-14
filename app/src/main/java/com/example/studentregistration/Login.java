@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
-    public TextView create,kanda;
+    public TextView create;
     private Button login;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,6 @@ public class Login extends AppCompatActivity {
 
         login = findViewById(R.id.log_in);
         create  = findViewById(R.id.create);
-        kanda = findViewById(R.id.kanda);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,12 +31,5 @@ public class Login extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), CreateAccount.class));
             }
         });
-        kanda.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            }
-        });
-
     }
 }

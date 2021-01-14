@@ -167,8 +167,6 @@
                 android:text="@string/password1"
                 android:textSize="25dp"
                 android:textColor="@color/black"
-
-
                 />
 
             <EditText
@@ -213,10 +211,7 @@
                 android:layout_marginRight="50dp"
 
                 />
-
-
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>

@@ -21,31 +21,21 @@
             >
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
         android:src="@drawable/ic_log_in"
-        android:padding="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
      />
+
             <TextView
-                android:id="@+id/kanda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kanda hano"
-                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/student_id"
                 android:textColor="@color/black"
-                />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/student_id"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="10dp"
-        android:fontFamily="sans-serif"
-        android:layout_marginTop="30dp"
-        />
+                android:textSize="25dp" />
 
     <EditText
         android:id="@+id/regno"
