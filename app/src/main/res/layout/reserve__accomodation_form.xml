@@ -44,14 +44,16 @@
             <EditText
                 android:id="@+id/registernumber"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="15dp"
                 android:selectAllOnFocus="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="15dp"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -67,16 +69,18 @@
             <EditText
                 android:id="@+id/stuname"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
+                android:layout_height="@dimen/height_edittext"
+
                 android:inputType="numberPassword"
                 android:cursorVisible="true"
                 android:editable="false"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="15dp"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -92,15 +96,16 @@
             <EditText
                 android:id="@+id/level"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="10dp"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="15dp"
                 android:selectAllOnFocus="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="15dp"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -116,14 +121,15 @@
             <EditText
                 android:id="@+id/academic"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:layout_marginTop="20dp"
-                android:paddingLeft="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginBottom="30dp"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -138,11 +144,13 @@
            <Spinner
                android:id="@+id/room"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="40dp"
                android:layout_marginTop="15dp"
                android:entries="@array/room"
                android:layout_marginBottom="50dp"
                android:textColor="@color/orange"
+               android:background="@drawable/borders"
+
                />
             <Button
                 android:id="@+id/reserve"

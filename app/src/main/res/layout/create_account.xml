@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".create_account"
     android:orientation="vertical"
-    android:background="@color/white"
+
     android:layout_margin="20dp">
     <ScrollView
         android:layout_width="match_parent"
@@ -41,13 +41,14 @@
             <EditText
                 android:id="@+id/name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:textColor="@color/light_blue"
                 android:textColorHint="@color/light_blue"
-
-                android:textSize="10dp" />
+                android:background="@drawable/borders"
+                android:textSize="10dp"
+                android:paddingLeft="@dimen/padding_editText"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -58,15 +59,17 @@
                 android:layout_marginBottom="5dp"
 
                 />
+
             <EditText
                 android:id="@+id/id"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="10dp"
-                android:textColor="@color/light_blue"
-                android:layout_marginBottom="15dp"
+                android:layout_height="@dimen/height_edittext"
                 android:layout_marginTop="10dp"
-                />
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/borders"
+                android:textColor="@color/light_blue"
+                android:textSize="10dp"
+                android:paddingLeft="@dimen/padding_editText"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,12 +81,14 @@
             <EditText
                 android:id="@+id/national"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="10dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="10dp"
                 android:inputType="number"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -96,12 +101,14 @@
             <EditText
                 android:id="@+id/phone"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="10dp"
                 android:textColor="@color/light_blue"
                 android:inputType="number"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -145,11 +152,13 @@
             <Spinner
                 android:id="@+id/department"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:entries="@array/department"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/orange"
+                android:background="@drawable/borders"
+
                 />
 
             <TextView
@@ -165,9 +174,9 @@
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:layout_marginTop="20dp"
-                android:paddingLeft="10dp"
+
                 android:inputType="numberPassword"
                 android:cursorVisible="true"
                 app:passwordToggleEnabled="true"
@@ -175,14 +184,31 @@
                 android:layout_marginBottom="30dp"
                 android:textSize="10dp"
                 android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/relative"
+               />
 
             <Button
                 android:id="@+id/register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
                 android:text="@string/register_student_button"
+
+
+                />
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reset"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
 

@@ -41,11 +41,12 @@
             <EditText
                 android:id="@+id/reg"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
+                android:layout_height="@dimen/height_edittext"
                 android:textColor="@color/light_blue"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 android:textSize="15dp" />
 
             <TextView
@@ -59,10 +60,12 @@
             <EditText
                 android:id="@+id/studentname"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 android:editable="false"
                 android:textSize="15dp" />
 
@@ -77,11 +80,13 @@
             <EditText
                 android:id="@+id/studentid"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -95,11 +100,13 @@
             <EditText
                 android:id="@+id/acayear"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:textColor="@color/light_blue"
                 android:textSize="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -113,11 +120,13 @@
             <EditText
                 android:id="@+id/landLord_names"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:textColor="@color/light_blue"
                 android:textSize="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -131,12 +140,14 @@
             <EditText
                 android:id="@+id/landid"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="15dp"
                 android:inputType="number"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -148,12 +159,14 @@
             <EditText
                 android:id="@+id/phoneLandlord"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginBottom="15dp"
                 android:inputType="number"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -166,12 +179,14 @@
             <EditText
                 android:id="@+id/houseNo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="16dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginBottom="15dp"
                 android:inputType="number"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -185,11 +200,13 @@
             <EditText
                 android:id="@+id/district"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -203,11 +220,13 @@
             <EditText
                 android:id="@+id/cell"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -221,11 +240,13 @@
             <EditText
                 android:id="@+id/sector"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="15dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
 
             <TextView
@@ -239,11 +260,13 @@
             <EditText
                 android:id="@+id/village"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_edittext"
                 android:textSize="16dp"
                 android:textColor="@color/light_blue"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
                 />
             <Button
                 android:id="@+id/declare"
