@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">student Registration</string>
+    <string name="student_id">Student Id</string>
+    <string name="hint_student_id">Enter your registration number</string>
+    <string name="password1">Password</string>
+    <string name="new_student_create_an_account">New student? create an account</string>
+    <string name="password">Password</string>
+    <string name="registration_student">Registration</string>
+    <string name="name_student">Name</string>
+    <string name="registration_number">Registration number</string>
+    <string name="national_id_student">National Id</string>
+    <string name="phone_student">Phone</string>
+    <string name="gender">Gender</string>
+    <string name="department_student">Department</string>
+    <string name="register_student_button">Register</string>
+    <string name="reserve_accomodation">Reserve Accomodation</string>
+    <string name="level_class">Level Class</string>
+    <string name="academic_year">Academic Year</string>
+    <string name="room">Room</string>
+    <string name="reserve">Reserve</string>
+    <string name="landlord_names">LandLord Names</string>
+
+    <string name="declare_acoomodation">Declare Acoomodation</string>
+    <string name="landlord_s_id">LandLords Id</string>
+    <string name="landlord_phone">Landlord Phone</string>
+    <string name="house_no">House No</string>
+    <string name="district">District</string>
+    <string name="cell">Cell</string>
+    <string name="sector">Sector</string>
+    <string name="village">Village</string>
+    <string name="declare">Register</string>
+
+    <string-array name="department">
+        <item>Choose your Department</item>
+        <item>IT:Information Technology</item>
+        <item>RE: Renewable Energy </item>
+        <item>ET:Electronics Telecomunication</item>
+    </string-array>
+
+    <string-array name="room">
+        <item>Select Room</item>
+        <item>6</item>
+        <item>8</item>
+        <item>9</item>
+
+    </string-array>
+
+
+</resources>

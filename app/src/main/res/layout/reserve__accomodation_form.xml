@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="2dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reserve_accomodation"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/light_blue"
+                android:textSize="30dp"
+                android:layout_gravity="center"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registration_number"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="30dp"
+                />
+
+            <EditText
+                android:id="@+id/registernumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="15dp"
+                android:selectAllOnFocus="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_student"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+
+                />
+
+            <EditText
+                android:id="@+id/stuname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+
+                android:inputType="numberPassword"
+                android:cursorVisible="true"
+                android:editable="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/level_class"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif"
+                />
+
+            <EditText
+                android:id="@+id/level"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="15dp"
+                android:selectAllOnFocus="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/academic_year"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+
+                />
+
+            <EditText
+                android:id="@+id/academic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="15dp"
+                android:textColor="@color/light_blue"
+                android:background="@drawable/borders"
+                android:paddingLeft="@dimen/padding_editText"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/room"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+
+                />
+
+           <Spinner
+               android:id="@+id/room"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginTop="15dp"
+               android:entries="@array/room"
+               android:layout_marginBottom="50dp"
+               android:textColor="@color/orange"
+               android:background="@drawable/borders"
+
+               />
+            <Button
+                android:id="@+id/reserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reserve"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                />
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
