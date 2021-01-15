@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_gravity="center"
+    >
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        >
+        <RelativeLayout
+            android:id="@+id/rtLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/borders"
+            android:padding="10dp"
+            android:layout_margin="1dp"
+
+            >
+            <TextView
+                android:id="@+id/student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student name"
+                android:textSize="20dp"
+                android:textColor="@color/teal_700"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:id="@+id/stid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reg no"
+                android:textSize="12dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/red"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:id="@+id/aca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stid"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="11dp"
+                android:text="academic year"
+                android:textColor="@color/red"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/lname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Landlord name "
+                android:textSize="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/student"
+                android:layout_alignParentLeft="true"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
