@@ -2,7 +2,6 @@ package com.example.studentregistration;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,7 +24,7 @@ public class ReserveAdapter extends RecyclerView.Adapter<ReserveAdapter.ViewHold
     public ReserveAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,  int viewType) {
         // create a new view
         ln = (LinearLayout) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.reservation_textx_view, parent, false);
+                .inflate(R.layout.reservation_texview, parent, false);
        ViewHolder vh = new ViewHolder(ln);
         return vh;
     }
@@ -55,10 +54,10 @@ public class ReserveAdapter extends RecyclerView.Adapter<ReserveAdapter.ViewHold
         try {
             JSONObject object = dataReserve.getJSONObject(position);
 
-            holder.TvName.setText(object.getString("stuname"));
-            holder.Tvacademic.setText(object.getString("academic"));
+            holder.TvName.setText(object.getString("names"));
+            holder.Tvacademic.setText(object.getString("academic_year"));
             holder.Tvroom.setText(object.getString("room"));
-            holder.Tvmyid.setText(object.getString("registernumber"));
+//            holder.Tvmyid.setText(object.getString("registernumber"));
 
 
         }catch(JSONException ex){

@@ -21,7 +21,7 @@ public class declareAdapter extends RecyclerView.Adapter<declareAdapter.ViewHold
 
     public declareAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ln = (LinearLayout) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.declare_text_view, parent, false);
+                .inflate(R.layout.declare_textview, parent, false);
         declareAdapter.ViewHolder vh = new declareAdapter.ViewHolder(ln);
         return vh;
 

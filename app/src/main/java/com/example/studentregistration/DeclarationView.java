@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class DeclarationTan extends Fragment {
+public class DeclarationView extends Fragment {
 
     private FloatingActionButton fabdeclare;
     private RecyclerView declareRecycle;
     private RecyclerView.LayoutManager layoutManager;
 
-    public DeclarationTan() {
+    public DeclarationView() {
         // Required empty public constructor
     }
 
@@ -28,7 +28,7 @@ public class DeclarationTan extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view  =  inflater.inflate(R.layout.declaration_tab, container, false);
+        final View view  =  inflater.inflate(R.layout.declaration_view, container, false);
 
         fabdeclare = view.findViewById(R.id.fab_decla);
 

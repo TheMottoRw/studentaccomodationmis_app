@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new ReservationView(), "Reservation");
-        adapter.addFragment(new DeclarationTan(), "Declaration"); // tabs
+        adapter.addFragment(new DeclarationView(), "Declaration"); // tabs
 
         viewPager.setAdapter(adapter);
     }

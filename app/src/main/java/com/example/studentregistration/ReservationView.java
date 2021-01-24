@@ -1,5 +1,6 @@
 package com.example.studentregistration;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,8 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -32,15 +35,20 @@ public class ReservationView extends Fragment {
     private RecyclerView reserveRecycle;
     private RecyclerView.LayoutManager layoutManager;
     public Context ContextCtx;
+    private Helper helper;
+    private ProgressDialog pgdialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view =  inflater.inflate(R.layout.reservation_tab, container, false);
+        final View view = inflater.inflate(R.layout.reservation_tab, container, false);
 
 
         fabserve = view.findViewById(R.id.fab_reserv);
+        helper = new Helper(ContextCtx);
+        pgdialog = new ProgressDialog(ContextCtx);
+        pgdialog.setMessage(ContextCtx.getString(R.string.processrequest));
 
 
         // for recycle view
@@ -53,7 +61,7 @@ public class ReservationView extends Fragment {
         fabserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent addReservation  = new Intent (view.getContext(), ReserveAccomodation.class);
+                Intent addReservation = new Intent(view.getContext(), ReserveAccomodation.class);
                 startActivity(addReservation);
             }
         });
@@ -62,55 +70,49 @@ public class ReservationView extends Fragment {
         return view;
     }
 
-    public void onAttach(Context ctx){
+    public void onAttach(Context ctx) {
         super.onAttach(ctx);
         ContextCtx = ctx;
 
 
-
     }
+
     @Override
     public void onResume() {
         super.onResume();
-        fetch_Data();
+//        fetch_Data();
     }
+
     private void fetch_Data() {
+        pgdialog.show();
         RequestQueue queue = Volley.newRequestQueue(ContextCtx);
-        String url = "http://localhost:3000/users";
+        String url = helper.host + "/student_reservation/" + helper.getDataValue("id");
         Log.d("Req", url);
 // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
+        JsonArrayRequest stringRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONArray>() {
                     @Override
-                    public void onResponse(String response) {
+                    public void onResponse(JSONArray array) {
+                        pgdialog.dismiss();
 
-                        try {
-
-                            JSONArray array = new JSONArray(response); // convert string to json array
-                            Log.d("Resp",array.toString());
-                            if (array.length() > 0) {
+                        Log.d("Resp", array.toString());
+                        if (array.length() > 0) {
 //
-                                ReserveAdapter adaptExpenses = new ReserveAdapter(ContextCtx, array);
+                            ReserveAdapter adaptExpenses = new ReserveAdapter(ContextCtx, array);
+                            reserveRecycle.setAdapter(adaptExpenses);
 
-                                reserveRecycle.setAdapter(adaptExpenses);
 
-
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
                         }
-
-
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                pgdialog.dismiss();
                 Toast.makeText(ContextCtx, "error " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
 // Add the request to the RequestQueue.
         queue.add(stringRequest);
 
     }
-    }
+}
