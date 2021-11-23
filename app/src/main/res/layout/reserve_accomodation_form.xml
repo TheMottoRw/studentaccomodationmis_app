@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_edittext"
 
-                android:inputType="numberPassword"
+                android:inputType="text"
                 android:cursorVisible="true"
                 android:editable="false"
                 android:layout_marginLeft="10dp"

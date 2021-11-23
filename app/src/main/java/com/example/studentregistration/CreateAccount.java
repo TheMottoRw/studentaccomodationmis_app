@@ -19,6 +19,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -75,13 +76,14 @@ public class CreateAccount extends AppCompatActivity {
         pgdialog.show();
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
 // prepare the Request
-        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, url,null,
-                new Response.Listener<JSONObject>() {
+        StringRequest getRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
                     @Override
-                    public void onResponse(JSONObject array) {
+                    public void onResponse(String arr) {
                         // display response
                         pgdialog.dismiss();
                         try {
+                            JSONObject array = new JSONObject(arr);
                             if (array.getString("status").equals("ok")) {
                                 helper.showToast("Account created successful");
                                 helper.setSession(array.getJSONArray("user_info").getJSONObject(0).toString());

@@ -78,7 +78,7 @@
 
                 />
             <EditText
-                android:id="@+id/studentid"
+                android:id="@+id/level_class"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_edittext"
                 android:textSize="15dp"

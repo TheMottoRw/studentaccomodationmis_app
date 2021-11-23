@@ -40,8 +40,8 @@ public class Helper {
         sh.apply();
     }
     public String getHost(){
-        String local = "http://192.168.43.161/RUT/accomodationmis/index.php/api/",
-                remote = "http://192.168.1.8/RUT/accomodationmis/index.php/api/";
+        String local = "http://192.168.13.120/RUT/accomodationmis/index.php/api",
+                remote = "http://10.0.2.2/RUT/accomodationmis/index.php/api";
         return getEditor().getString("host",local);
     }
 

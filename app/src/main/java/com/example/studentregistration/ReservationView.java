@@ -46,6 +46,8 @@ public class ReservationView extends Fragment {
 
 
         fabserve = view.findViewById(R.id.fab_reserv);
+
+        ContextCtx = view.getContext();
         helper = new Helper(ContextCtx);
         pgdialog = new ProgressDialog(ContextCtx);
         pgdialog.setMessage(ContextCtx.getString(R.string.processrequest));

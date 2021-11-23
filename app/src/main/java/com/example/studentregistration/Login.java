@@ -20,6 +20,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -38,8 +39,8 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        edtPhone = findViewById(R.id.password);
-        edtPassword = findViewById(R.id.edtPhone);
+        edtPhone = findViewById(R.id.edtPhone);
+        edtPassword = findViewById(R.id.password);
         login = findViewById(R.id.log_in);
         create  = findViewById(R.id.create);
         pgdialog = new ProgressDialog(this);
@@ -60,22 +61,31 @@ public class Login extends AppCompatActivity {
     }
     public void studentLogin() {
         pgdialog.show();
-        final String url = helper.host + "/studentLogin";
+        final String url = helper.host + "/login";
         pgdialog.show();
+        Map<String, String> params = new HashMap<>();
+        params.put("phone", edtPhone.getText().toString().trim());
+        params.put("password", edtPassword.getText().toString());
+        Log.d("LoginUrl",url);
+        Log.d("LoginData",params.toString());
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
 // prepare the Request
-        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, url,null,
-                new Response.Listener<JSONObject>() {
+        StringRequest getRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
                     @Override
-                    public void onResponse(JSONObject array) {
+                    public void onResponse(String arr) {
                         // display response
                         pgdialog.dismiss();
                         try {
+                            JSONObject array = new JSONObject(arr);
                             if (array.getString("status").equals("ok")) {
                                 helper.showToast("Login succesful");
-                                helper.setSession(array.getJSONArray("user_info").getJSONObject(0).toString());
-                                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                helper.setSession(array.getJSONObject("user_info").toString());
+                                Intent intent = new Intent(Login.this,MainActivity.class);
+//                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
                             } else {
+                                Log.d("LoginStatus",array.toString());
                                 helper.showToast("Failed to login");
                             }
                         } catch (JSONException ex) {
@@ -96,6 +106,7 @@ public class Login extends AppCompatActivity {
                 Map<String, String> params = new HashMap<>();
                 params.put("phone", edtPhone.getText().toString().trim());
                 params.put("password", edtPassword.getText().toString());
+                Log.d("LoginData",params.toString());
                 return params;
             }
 
