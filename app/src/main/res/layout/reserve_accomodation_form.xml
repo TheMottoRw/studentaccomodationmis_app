@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_edittext"
 
-                android:inputType="numberPassword"
+                android:inputType="text"
                 android:cursorVisible="true"
                 android:editable="false"
                 android:layout_marginLeft="10dp"
@@ -150,7 +150,8 @@
                android:layout_marginBottom="50dp"
                android:textColor="@color/orange"
                android:background="@drawable/borders"
-
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="24dp"
                />
             <Button
                 android:id="@+id/reserve"
@@ -159,6 +160,8 @@
                 android:text="@string/reserve"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
+                android:textColor="@color/white"
+
                 />
 
 

@@ -20,55 +20,55 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 
+public class DeclarationView extends Fragment {
 
-public class ReservationView extends Fragment {
-
-    private FloatingActionButton fabserve;
-    private RecyclerView reserveRecycle;
+    private FloatingActionButton fabdeclare;
+    private RecyclerView declareRecycle;
     private RecyclerView.LayoutManager layoutManager;
     public Context ContextCtx;
     private Helper helper;
     private ProgressDialog pgdialog;
 
+
+    public DeclarationView() {
+        // Required empty public constructor
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view = inflater.inflate(R.layout.reservation_tab, container, false);
+        final View view  =  inflater.inflate(R.layout.declaration_view, container, false);
 
+        fabdeclare = view.findViewById(R.id.fab_decla);
 
-        fabserve = view.findViewById(R.id.fab_reserv);
-
+        // for recycle view
+        declareRecycle = view.findViewById(R.id.declarecycle);
+        layoutManager = new LinearLayoutManager(view.getContext());
+        declareRecycle.setLayoutManager(layoutManager);
         ContextCtx = view.getContext();
         helper = new Helper(ContextCtx);
         pgdialog = new ProgressDialog(ContextCtx);
         pgdialog.setMessage(ContextCtx.getString(R.string.processrequest));
+        fetch_Data();
 
-
-        // for recycle view
-        reserveRecycle = view.findViewById(R.id.reservation_recycle);
-        layoutManager = new LinearLayoutManager(view.getContext());
-        reserveRecycle.setLayoutManager(layoutManager);
-        fabserve.setOnClickListener(new View.OnClickListener() {
+        fabdeclare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent addReservation = new Intent(view.getContext(), ReserveAccomodation.class);
-                startActivity(addReservation);
+                Intent adddeclaration  = new Intent (view.getContext(), DeclarationForm.class);
+                startActivity(adddeclaration);
             }
         });
 
-        fetch_Data();
+
         return view;
     }
-
     public void onAttach(Context ctx) {
         super.onAttach(ctx);
         ContextCtx = ctx;
@@ -83,7 +83,7 @@ public class ReservationView extends Fragment {
     private void fetch_Data() {
         pgdialog.show();
         RequestQueue queue = Volley.newRequestQueue(ContextCtx);
-        String url = helper.host + "/student_reservation/" + helper.getDataValue("id");
+        String url = helper.host + "/student_declaration/" + helper.getDataValue("id");
         Log.d("Req", url);
 // Request a string response from the provided URL.
         JsonArrayRequest stringRequest = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -95,9 +95,8 @@ public class ReservationView extends Fragment {
                         Log.d("Resp", array.toString());
                         if (array.length() > 0) {
 //
-                            ReserveAdapter adaptExpenses = new ReserveAdapter(ContextCtx, array);
-                            reserveRecycle.setAdapter(adaptExpenses);
-
+                            declareAdapter adaptExpenses = new declareAdapter(ContextCtx, array);
+                            declareRecycle.setAdapter(adaptExpenses);
 
                         }
                     }
@@ -112,4 +111,5 @@ public class ReservationView extends Fragment {
         queue.add(stringRequest);
 
     }
+
 }

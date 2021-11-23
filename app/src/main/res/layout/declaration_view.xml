@@ -8,14 +8,13 @@
     android:paddingLeft="2dp"
     android:paddingRight="2dp"
     android:paddingBottom="60dp"
-    tools:context=".DeclarationTan">
-
+    tools:context=".DeclarationView">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/declarecycle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="-10dp"
         android:scrollbars="vertical"
         />
 
@@ -28,9 +27,8 @@
         android:layout_marginBottom="70dp"
         android:layout_marginRight="30dp"
         android:src="@drawable/ic__add"
-
-
+        app:rippleColor="@color/white"
+        app:backgroundTint="@color/blue_yerurutse"
         />
-
 
 </RelativeLayout>

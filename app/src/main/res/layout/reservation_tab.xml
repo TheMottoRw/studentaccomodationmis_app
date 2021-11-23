@@ -11,14 +11,12 @@ android:paddingBottom="60dp"
 tools:context=".ReservationView">
 
 
-
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/reservation_recycle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
-    android:scrollbars="vertical"
-    />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reservation_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:scrollbars="vertical" />
 
 <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:id="@+id/fab_reserv"
@@ -28,9 +26,9 @@ tools:context=".ReservationView">
     android:layout_alignParentRight="true"
     android:layout_marginBottom="70dp"
     android:layout_marginRight="30dp"
-
+    android:background="@color/green_light"
     android:src="@drawable/ic__add"
-
+    app:backgroundTint="@color/blue_yerurutse"
 
     />
 </RelativeLayout>
