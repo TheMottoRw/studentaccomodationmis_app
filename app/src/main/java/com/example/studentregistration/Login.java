@@ -46,6 +46,10 @@ public class Login extends AppCompatActivity {
         pgdialog = new ProgressDialog(this);
         helper = new Helper(this);
 
+        if(helper.hasSession()) {
+            finish();
+            startActivity(new Intent(Login.this,MainActivity.class));
+        }
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +80,7 @@ public class Login extends AppCompatActivity {
                     public void onResponse(String arr) {
                         // display response
                         pgdialog.dismiss();
+                        Log.d("LoginResponse",arr);
                         try {
                             JSONObject array = new JSONObject(arr);
                             if (array.getString("status").equals("ok")) {

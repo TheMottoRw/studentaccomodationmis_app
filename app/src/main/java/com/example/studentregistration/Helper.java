@@ -42,7 +42,7 @@ public class Helper {
     public String getHost(){
         String local = "http://192.168.13.120/RUT/accomodationmis/index.php/api",
                 remote = "http://10.0.2.2/RUT/accomodationmis/index.php/api";
-        return getEditor().getString("host",local);
+        return getEditor().getString("host",remote);
     }
 
     public void showToast(String message){
@@ -60,7 +60,7 @@ public class Helper {
         sh.apply();
     }
     public boolean hasSession(){
-        return this.getEditor().contains("sess_id");
+        return this.getEditor().contains("user_info");
     }
     public String getDataValue(String parameter){
         String val = "";

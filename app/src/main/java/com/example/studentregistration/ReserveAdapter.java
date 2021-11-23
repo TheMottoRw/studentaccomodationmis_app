@@ -67,7 +67,7 @@ public class ReserveAdapter extends RecyclerView.Adapter<ReserveAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dataReserve.length();
     }
 
 }

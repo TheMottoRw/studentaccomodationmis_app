@@ -69,11 +69,21 @@ public class DeclarationView extends Fragment {
 
         return view;
     }
+    public void onAttach(Context ctx) {
+        super.onAttach(ctx);
+        ContextCtx = ctx;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        fetch_Data();
+    }
 
     private void fetch_Data() {
         pgdialog.show();
         RequestQueue queue = Volley.newRequestQueue(ContextCtx);
-        String url = helper.host + "/student_reservation/" + helper.getDataValue("id");
+        String url = helper.host + "/student_declaration/" + helper.getDataValue("id");
         Log.d("Req", url);
 // Request a string response from the provided URL.
         JsonArrayRequest stringRequest = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -85,7 +95,7 @@ public class DeclarationView extends Fragment {
                         Log.d("Resp", array.toString());
                         if (array.length() > 0) {
 //
-                            ReserveAdapter adaptExpenses = new ReserveAdapter(ContextCtx, array);
+                            declareAdapter adaptExpenses = new declareAdapter(ContextCtx, array);
                             declareRecycle.setAdapter(adaptExpenses);
 
                         }

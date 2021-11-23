@@ -52,9 +52,9 @@ public class declareAdapter extends RecyclerView.Adapter<declareAdapter.ViewHold
             try {
                 JSONObject object = declarationData.getJSONObject(position);
 
-                holder.TvName.setText(object.getString("stuname"));
-                holder.Tvacademic.setText(object.getString("academic"));
-                holder.TvlandlordName.setText(object.getString("landName"));
+                holder.TvName.setText(object.getString("names"));
+                holder.Tvacademic.setText(object.getString("academic_year"));
+                holder.TvlandlordName.setText(object.getString("landlord_name"));
                 holder.Tvregno.setText(object.getString("regno")); // for registrationNumber
 
 
@@ -66,6 +66,6 @@ public class declareAdapter extends RecyclerView.Adapter<declareAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return declarationData.length();
     }
 }

@@ -57,9 +57,6 @@ public class ReservationView extends Fragment {
         reserveRecycle = view.findViewById(R.id.reservation_recycle);
         layoutManager = new LinearLayoutManager(view.getContext());
         reserveRecycle.setLayoutManager(layoutManager);
-        fetch_Data();
-
-
         fabserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,14 +72,12 @@ public class ReservationView extends Fragment {
     public void onAttach(Context ctx) {
         super.onAttach(ctx);
         ContextCtx = ctx;
-
-
     }
 
     @Override
     public void onResume() {
         super.onResume();
-//        fetch_Data();
+        fetch_Data();
     }
 
     private void fetch_Data() {

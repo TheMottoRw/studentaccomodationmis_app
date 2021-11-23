@@ -46,6 +46,7 @@ public class DeclarationForm extends AppCompatActivity {
         level_class  =findViewById(R.id.level_class);
         acayear = findViewById(R.id.acayear);
         landid = findViewById(R.id.landid);
+        landLord_names = findViewById(R.id.landLord_names);
         phoneLandlord = findViewById(R.id.phoneLandlord);
         houseNo = findViewById(R.id.houseNo);
         district = findViewById(R.id.district);
@@ -72,6 +73,8 @@ public class DeclarationForm extends AppCompatActivity {
                     @Override
                     public void onResponse(String resp) {
                         // Display the first 500 characters of the response string.
+                        Log.d("DeclarationResponse",resp);
+
                         try {
                             JSONObject response = new JSONObject(resp);
                             Snackbar.make(declare, response.getString("message"), Snackbar.LENGTH_SHORT).show();

@@ -82,6 +82,7 @@ public class CreateAccount extends AppCompatActivity {
                     public void onResponse(String arr) {
                         // display response
                         pgdialog.dismiss();
+                        Log.d("SignupResponse",arr);
                         try {
                             JSONObject array = new JSONObject(arr);
                             if (array.getString("status").equals("ok")) {
